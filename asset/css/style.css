@@ -1,0 +1,42 @@
+.image-with-border {
+    border: 2px solid #009dff; /* برواز بسماكة 2 بكسل ولون #333 */
+    padding: 10px; /* تباعد داخلي بين الصورة والبرواز */
+    border-radius: 15px; /* زوايا مستديرة للصورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف لجعل الصورة تبدو مرتفعة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* انتقال سلس للتحركات */
+    float: left; /* لجعل الصورة تتجه إلى اليسار */
+    margin-right: 20px; /* تباعد بين الصورة والنص */
+    width: 300px; /* يمكنك ضبط العرض حسب حجم الصورة */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* تأثير عند التمرير فوق الصورة */
+.image-with-border:hover {
+    transform: scale(1.05); /* تكبير الصورة بشكل خفيف عند التمرير */
+    box-shadow: 0 8px 16px rgba(29, 22, 236, 0.2); /* زيادة الظل لإبراز الصورة */
+}
+
+
+        
+        h1 {
+            border-right: 6px solid rgb(0, 255, 251); /* تغيير الحدود إلى الجهة اليمنى */
+            background-color: lightgrey;
+            direction: rtl; /* الاتجاه من اليمين لليسار */
+
+        }
+
+        p {
+            /* background-image: url("https://th.bing.com/th/id/OIP.l9NexpjhA1KfCXpCgUnTiAHaHa?rs=1&pid=ImgDetMain"); */
+            background-repeat: no-repeat;
+            background-size: 20% 10%; 
+            direction: rtl;
+            white-space: pre-wrap;
+            color: rgb(18, 0, 134);
+            border: 2px solid rgb(0, 132, 156);
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 2rem;
+            min-height: 300px; /* ارتفاع كافي لضمان ظهور الصورة */
+            text-align: justify;
+        }
