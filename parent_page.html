@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+
+    <title></title>
+  <style>
+      table {
+  border-spacing: 5px;
+  width: 50%;
+  border: 1px solid #ddd;
+  direction:rtl;
+  text-align: center;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  float:right;
+  direction:rtl;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  align-content:center;
+  padding: 14px 16px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 20px 18px;
+  display:none;
+  background-color: white;
+  overflow: hidden;
+  text-align: right;
+  
+  /*width: 50%*/
+  
+}
+.style22
+        {
+            width: 103px;
+            height: 111px;
+            text-align:center;
+        }
+
+/*css slideshow*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display:inline-block;
+  width:100%;
+  /*float:right;*/
+  padding-right:50px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+.tab1 {
+  display: none;
+}
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+    </style>
+</head>
+<body>
+    <form name="form1" method="post" action="./parent_page.aspx" id="form1" dir="rtl">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI5NTE3MjAwNg9kFgICAQ9kFgoCAQ8WAh4EVGV4dAVFPGEgY2xhc3M9J3Byb2R1Y3RuYW1lTGluaycgaHJlZj1wbGFuMTIuYXNweD7Yrti32Kkg2KfZhNij2LPYqNmI2Lk8L2E+ZAIFDw8WAh4HVmlzaWJsZWdkZAIHDw8WAh8ABSXYp9iz2KfZhdmHINmF2LXYt9mB2Ykg2LnZhNmJINmF2K3ZhdivZGQCCQ8PFgIfAWdkZAILDw8WAh8ABQUxMti5NGRkZAy60l/yc6XGnuMW0gsXXCKrR7Qgy9wCwdSj08v4KzEX" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B389925F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAEh/6Bye3ZwqGUjCsXzWPy8N8EefJ44tVuvefJRWuDa1TREghZBVv0boc2NaC2/zVFQdp1z+nYWZ+pirZkxjR3dz7hv76BH8vu7iM4tkb8en1WsXuBX6KwpkP5i5T/PF3HNOQI+Pkpv5K3HTAiPKVSAaqMBGERuU3z8WljxuLf9fDgNpMi99NYnQuSHMWRQtjLCNQKHQlK+/PdbCL51rlkihuqPfnWPjLhGGtOfEKkH/VQ2SAovm8CtCMEJB6jivrmLz82P7qR1Xkm/inOg2weTmzfSgoizX14qL5dBOXQX5RyUVu9YTscthmyShAUzHXqgWFcqQW5+/V3+bfcJBI/aUV9aDUaiyv6yModabhqfv54PEQrRx0aEOxy7JzoVkK7q0WS2HNYVZ1Ek/LxSXoa0gUtbftlTHOuJohGlPvAevnib3V0wQmmTObN/V+S3Rh4l/SOoLBUNQX/IarqS8pWQ2f3uc0Wdv/JXgJVHbsStnYJi0scUsaHiJ03c1Nukdz1dgQsYwhBQi3NFHtHCoH5cYGdUYX0GGVQ+LuwlZTzymIywBZWc40kkLholgdBWG8Tceo6/4x1WtWQUrlQcpPUvcXF5E3YXEsAyyHraPVs1c2mcwuHplv8neApxwIYnANpRooyYkRX9jDKkvfugmK+GfTKl2kpTASRNrm8io02OERBVr38q3H96+1V1WqqHOvtYic+zX6dww6Ce9HQ7GVTCdRaxBWiMVy2eruR9SCxv6DyYMlV2iADWQgX5j2o8sFajedwgmpUjrYNY7M80uEY+N582L0zSNBj9Io0dtae6mxAP1FVAuT5m2TTDLC58VaiA7rerd4Nci8zZbnnNqM9W5qsy7Jaj/PvVCNqwCCg4CyqSayQSw3YtL7cRcZybsJeYse/oH3filb20CLFAHGpqbnLfvur2y9CAyHDLQ4mhqxL0dAmJao+Knj/QcniPdxfruj7ttNTukXDdsjTXbqwzklH+tZ26zucNZuUBOmHa1x111nyiLY3F1K4Kr5ShQxFgYRioRvCuf7tcRJc7lJiP0PkF5Vc0Ai70ebDwNDwmq9X1RboF/Kuh1dQ4GyhdgEoTNOlxAMQNda0EQo9vTB8cNh/1IVdP+YEOPrPIjKzPQtv+xKUiNBy4uUJVGVVZXYS+s6wVeI3/udSB+PgyFrvU/Z9zL2rqJDl+CF0yuPvw16NPACx4NcHyz20aaoHzDZ2rRpMiNb4PVQfEHp0BjgMh9aiXmGk5JwZ04X5xbZvsRjZCKf67qt6sKrW8w1BKvqmo88OCTHOI6NO4rJViBsfE0mDqlv+E5uUN/12Ce7qmaWcJmL8Cxd90Lv0B2wmGqEs8RuWjfvSC13Kmgce9o3cNUKht3DPvQdg5SChtCG/C4DNWWiN455dGcCfq6N1zRusTCIqm7GUcydCixD0Poes7ddsbm+uj63enCvuzXvsy0HxPWD4FL2cXnLJFIjEXBdPN7iJl6ZCNCW2bYM+GGih0+QNj/fCHgN/szdQNh6XYT3SFU74+32IDUI0w4xXIFsb9Ymn3BWkKdsVjXxTblcvwP4gcp+1Jl4XtqWJgHpz1kaw==" />
+</div>
+        <div>
+        <div>
+            <img align="middle"  dir="rtl" src="images/banner.jpg" alt="banner" class="image"/>
+        </div>
+        <div class="topnav">
+  <a class="active" href="Default.aspx">الصفحة الرئيسية</a>
+  <a href="comp2parent.aspx">الملاحظات و الغياب</a>
+  <a href="review.aspx">المذكرات </a>
+            <a class='productnameLink' href=plan12.aspx>خطة الأسبوع</a> 
+
+              
+                                   
+  
+
+  <a href="allDepart.aspx">الأقسام العلمية </a>
+            <a href="#about">اتصل بنا</a>
+</div>
+        <table id="Table1" border="0">
+
+</table>
+      
+<div>
+
+    <table align="center" class="auto-style4" dir="rtl" >
+        
+<tr>
+            <td>
+                <span id="Label2" style="color:Maroon;font-family:Sakkal Majalla;font-size:X-Large;font-weight:bold;">الإسم   :</span>
+                &nbsp;
+                <span id="Label3" style="font-size:X-Large;font-weight:bold;">اسامه مصطفى على محمد</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span id="Label4" style="color:Maroon;font-family:Sakkal Majalla;font-size:X-Large;font-weight:bold;">الصف :</span>
+                &nbsp;&nbsp;
+                <span id="Label5" style="color:Black;font-size:X-Large;font-weight:bold;">12ع4</span>
+         
+                    <br />
+                <div>
+                    <strong>
+                    
+                    </strong>
+
+                    <input type="hidden" name="hidestage" id="hidestage" />
+
+                </div>
+       </td>
+        </tr>
+        <tr>
+            <div style="overflow:auto;">
+    <div style="float:inline-start;">
+      <button type="button" id="tabBtn" style="display:none" onclick="tabFunction()">الجدول</button>
+      <button type="button" id="gradeBtn" style="display:block" onclick="tabFunction()">الدرجات</button>
+    </div>
+  </div
+        </tr>
+        <tr>
+        <div id="class_tab" class="tab">
+        
+            <br />
+            <td align="center" style="border: medium solid #003366;text-align:center"class="style13">
+                <span id="Label1" align="center" style="color:Blue;font-family:Sakkal Majalla;font-size:X-Large;font-weight:bold;">الجدول الإسبوعي للصف</span>
+                <br />
+ <div style="width:100%;scroll-snap-type: x mandatory;overflow-x: scroll;">
+            <table class="auto-style3" 
+                
+                
+                style="border: thin solid #990033; padding: inherit; margin: inherit; clip: rect(inherit, inherit, inherit, inherit); background-color: #FFFFFF; widt" 
+                align="right" ; width="20%">
+                <tr style="font-family: 'Sakkal Majalla'; font-size: x-large; color: #FF0000; font-weight: bold">
+                    <td class="style23" style="border: thin solid blue; " 
+                        align="center" width="60">
+                        الحصة</td>
+                    <td class="auto-style17" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        ا<span class="auto-style21">لأولى</span></td>
+                    <td class="auto-style22" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        الثانية</td>
+                    <td class="auto-style22" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        الثالثة</td>
+                    <td class="auto-style22" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        الرابعة</td>
+                    <td class="auto-style22" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        الخامسة</td>
+                    <td class="auto-style22" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        السادسة</td>
+                     <td class="auto-style19" 
+                        
+                        
+                        style="border: thin solid blue; " 
+                        align="center">
+                        السابعة</td>
+                </tr>
+                <tr>
+                    <td class="style24" 
+                        style="border: thin solid blue; font-family: 'Sakkal Majalla'; font-weight: bold; color: #FF0000; " 
+                        rowspan="2" align="center" width="90">
+                        الأحد</td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox1" type="text" value="بسام العاصي" id="TextBox1" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox2" type="text" value="نواف فيحان عبد الرحمن العتيبي" id="TextBox2" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox3" type="text" value="صابر بن إبراهيم علاقي " id="TextBox3" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox4" type="text" id="TextBox4" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox70" type="text" id="TextBox70" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox71" type="text" value="أنس اليتيم" id="TextBox71" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style20" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox90" type="text" value="خالد عاصي العازمي" id="TextBox90" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox5" type="text" value="الرياضيات" id="TextBox5" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox6" type="text" value="التربية إسلامية" id="TextBox6" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox7" type="text" value="اللغة انجليزية" id="TextBox7" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox8" type="text" id="TextBox8" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox80" type="text" id="TextBox80" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox81" type="text" value="اللغة عربية" id="TextBox81" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style20" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox91" type="text" value="التربية بدنية" id="TextBox91" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Large;font-weight:bold;width:100px;" /></td>
+
+                </tr>
+                <tr>
+                    <td class="style24" 
+                        style="border: thin solid blue; font-family: 'Sakkal Majalla'; font-weight: bold; color: #FF0000; " 
+                        rowspan="2" align="center" width="90">
+                        الإثنين</td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox9" type="text" value="أنس اليتيم" id="TextBox9" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox10" type="text" value="نواف فيحان عبد الرحمن العتيبي" id="TextBox10" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; background-position: center; " 
+                        valign="middle" align="center">
+                        <input name="TextBox11" type="text" id="TextBox11" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox12" type="text" value="بسام العاصي" id="TextBox12" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox72" type="text" value="صابر بن إبراهيم علاقي " id="TextBox72" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox73" type="text" value="مجدي يحي نصر علي" id="TextBox73" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style20" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox92" type="text" value="حمدي فكري المحمدي الداولوج" id="TextBox92" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox13" type="text" value="اللغة عربية" id="TextBox13" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" />
+                    </td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox14" type="text" value="التربية إسلامية" id="TextBox14" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox15" type="text" id="TextBox15" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox16" type="text" value="الرياضيات" id="TextBox16" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox82" type="text" value="اللغة انجليزية" id="TextBox82" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox83" type="text" value="الفيزياء" id="TextBox83" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style20" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox93" type="text" value="الكيمياء" id="TextBox93" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="style24" 
+                        style="border: thin solid blue; font-family: 'Sakkal Majalla'; font-weight: bold; color: #FF0000; " 
+                        rowspan="2" align="center" width="90">
+                        الثلاثاء</td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox17" type="text" value="بسام العاصي" id="TextBox17" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox18" type="text" value="السعيد محمد محمود عبد الرازق" id="TextBox18" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox19" type="text" value="حمدي فكري المحمدي الداولوج" id="TextBox19" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox20" type="text" value="أنس اليتيم" id="TextBox20" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox74" type="text" value="نواف فيحان عبد الرحمن العتيبي" id="TextBox74" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center" >
+                        <input name="TextBox75" type="text" id="TextBox75" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                     <td class="auto-style20" 
+                        style="border: thin solid firebrick; " 
+                        align="center" >
+                        <input name="TextBox94" type="text" value="عبدالهادي مبارك المري" id="TextBox94" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox21" type="text" value="الرياضيات" id="TextBox21" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox22" type="text" value="الأحياء" id="TextBox22" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox23" type="text" value="الكيمياء" id="TextBox23" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox24" type="text" value="اللغة عربية" id="TextBox24" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:50px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox84" type="text" value="التربية إسلامية" id="TextBox84" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox85" type="text" id="TextBox85" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:50px;" /></td>
+                    <td class="auto-style20" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox95" type="text" value="التربية بدنية" id="TextBox95" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="style24" 
+                        style="border: thin solid blue; font-family: 'Sakkal Majalla'; font-weight: bold; color: #FF0000; " 
+                        rowspan="2" align="center" width="90">
+                        الأربعاء</td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox25" type="text" value="السعيد محمد محمود عبد الرازق" id="TextBox25" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox26" type="text" value="صابر بن إبراهيم علاقي " id="TextBox26" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox27" type="text" value="أنس اليتيم" id="TextBox27" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox28" type="text" value="بسام العاصي" id="TextBox28" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox76" type="text" value="مجدي يحي نصر علي" id="TextBox76" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox77" type="text" value="حمدي فكري المحمدي الداولوج" id="TextBox77" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                     <td class="auto-style20" 
+                        style="border: thin solid firebrick; " 
+                        align="center" >
+                        <input name="TextBox96" type="text" value="أنس اليتيم" id="TextBox96" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox29" type="text" value="الأحياء" id="TextBox29" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox30" type="text" value="اللغة انجليزية" id="TextBox30" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox31" type="text" value="اللغة عربية" id="TextBox31" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox32" type="text" value="الرياضيات" id="TextBox32" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox86" type="text" value="الفيزياء" id="TextBox86" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox87" type="text" value="الكيمياء" id="TextBox87" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style20" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox97" type="text" value="اللغة عربية" id="TextBox97" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="style24" 
+                        style="border: thin solid blue; font-family: 'Sakkal Majalla'; font-weight: bold; color: #FF0000; " 
+                        rowspan="2" align="center" width="90">
+                        الخميس</td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox33" type="text" value="بسام العاصي" id="TextBox33" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox34" type="text" value="مجدي يحي نصر علي" id="TextBox34" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox35" type="text" value="منصور دمشق العجمي" id="TextBox35" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox36" type="text" value="أنس اليتيم" id="TextBox36" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox78" type="text" value="بسام العاصي" id="TextBox78" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" 
+                        style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox79" type="text" value="السعيد محمد محمود عبد الرازق" id="TextBox79" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                     <td class="auto-style20" 
+                        style="border: thin solid firebrick; " 
+                        align="center" >
+                        <input name="TextBox98" type="text" value="محمد عباس" id="TextBox98" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox37" type="text" value="الرياضيات" id="TextBox37" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox38" type="text" value="الفيزياء" id="TextBox38" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox39" type="text" value="اللغة عربية" id="TextBox39" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox40" type="text" value="اللغة عربية" id="TextBox40" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox88" type="text" value="الرياضيات" id="TextBox88" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style18" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox89" type="text" value="الأحياء" id="TextBox89" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                    <td class="auto-style20" style="border: thin solid firebrick; " 
+                        align="center">
+                        <input name="TextBox99" type="text" value="الجغرافيا" id="TextBox99" style="background-color:#D4CEB4;font-family:Sakkal Majalla;font-size:Small;font-weight:bold;width:100px;" /></td>
+                </tr>
+            </table>
+                <br />
+            </td>
+       
+        </div>
+        </tr>
+        <tr>
+        <div id="grade_tab" class="tab1">
+                <iframe id="myFrame" src="st_grade.aspx" style="height:500px;width:90%;right:20px;direction:rtl" ></iframe>
+            
+
+        </div>
+        </tr>
+ </table>
+
+    </div>
+ 
+    </form>
+    <script>
+        function tabFunction() {
+            var x = document.getElementById("class_tab");
+            var y = document.getElementById("grade_tab");
+            var z = document.getElementById("tabBtn");
+            var w = document.getElementById("gradeBtn")
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                z.style.display = "none"
+                w.style.display = "block";
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+                
+                
+                    y.style.display = "block";
+                    w.style.display = "none"
+                    z.style.display = "block";
+                
+            }
+            //var y = document.getElementById("grade_tab");
+            //if (y.style.display === "none") {
+            //    y.style.display = "block";
+            //    w.style.display = "none"
+            //    z.style.display = "block";
+            //} else {
+            //    y.style.display = "none";
+            //}
+        }
+//        function gradeFunction() {
+//            var x = document.getElementById("grade_tab");
+//            if (x.style.display === "none") {
+//                x.style.display = "block";
+//            } else {
+//                x.style.display = "none";
+
+//    var currentTab = 0; // Current tab is set to be the first tab (0)
+//showTab(currentTab); // Display the current tab
+
+//function showTab(n) {
+//  // This function will display the specified tab of the form...
+//  var x = document.getElementsByClassName("tab");
+//  x[n].style.display = "block";
+//  //... and fix the Previous/Next buttons:
+//  if (n == 0) {
+//    document.getElementById("prevBtn").style.display = "none";
+//  } else {
+//    document.getElementById("prevBtn").style.display = "inline";
+//  }
+  
+//  //... and run a function that will display the correct step indicator:
+//  fixStepIndicator(n)
+//}
+
+//function nextPrev(n) {
+//  // This function will figure out which tab to display
+//  var x = document.getElementsByClassName("tab");
+//  // Exit the function if any field in the current tab is invalid:
+//  //if (n == 1 && !validateForm()) return false;
+//  // Hide the current tab:
+//  x[currentTab].style.display = "none";
+//  // Increase or decrease the current tab by 1:
+//  currentTab = currentTab + n;
+//  // if you have reached the end of the form...
+  
+//  // Otherwise, display the correct tab:
+//  showTab(currentTab);
+//}
+
+//function validateForm() {
+//  // This function deals with validation of the form fields
+//  var x, y, i, valid = true;
+//  x = document.getElementsByClassName("tab");
+//  y = x[currentTab].getElementsByTagName("input");
+//  // A loop that checks every input field in the current tab:
+//  for (i = 0; i < y.length; i++) {
+//    // If a field is empty...
+//    if (y[i].value == "") {
+//      // add an "invalid" class to the field:
+//      y[i].className += " invalid";
+//      // and set the current valid status to false
+//      valid = false;
+//    }
+//  }
+//  // If the valid status is true, mark the step as finished and valid:
+  
+//  return valid; // return the valid status
+//}
+
+//function fixStepIndicator(n) {
+//  // This function removes the "active" class of all steps...
+//  var i, x = document.getElementsByClassName("step");
+//  for (i = 0; i < x.length; i++) {
+//    x[i].className = x[i].className.replace(" active", "");
+//  }
+//  //... and adds the "active" class on the current step:
+//  x[n].className += " active";
+//}
+    </script>
+
+</body>
+</html>
